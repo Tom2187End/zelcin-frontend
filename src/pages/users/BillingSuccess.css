@@ -1,0 +1,23 @@
+.billing-success-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 365px);
+}
+.billing-success-container .btn {
+    transition: all .2s ease;
+    padding: .7rem;
+    background: linear-gradient(90deg, #0191e6 0%, #014973 100%);
+}
+.billing-success-container .btn:hover {
+    box-shadow: 0px 3px 4px #015180;
+}
+.billing-success-container .btn-primary:active {
+    background: linear-gradient(90deg, #032e47 0%, #0a4f77 100%) !important;
+}
+.billing-success-container .btn-danger {
+    background: linear-gradient(90deg, #e6014d 0%, #440a42 100%);
+}
+.billing-success-container .btn-danger:active {
+    background: linear-gradient(90deg, #cb2929, #850606f2);
+}

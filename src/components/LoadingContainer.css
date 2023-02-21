@@ -1,0 +1,12 @@
+.loading-container {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 1000;
+    background-color: #070f165e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

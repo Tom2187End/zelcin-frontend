@@ -1,0 +1,34 @@
+.lecture-container {
+    padding: 20px;
+}
+.lecture-title {
+    font-size: 30px;
+    color: #005492;
+    font-weight: 700;
+    font-family: 'MontserratBold';
+    line-height: 29px;
+}
+.lecture-container h1,
+.lecture-container h2,
+.lecture-container h3,
+.lecture-container h4,
+.lecture-container h5,
+.lecture-container h6 {
+    font-family: MontserratBold !important;
+}
+
+.lecture-container p {
+    font-family: MontserratNormal !important;
+}
+.lecture-container table td {
+    border: 1px solid #333333;
+}
+
+@media (max-width: 576px) {
+    .lecture-container > .card > .card-body {
+        padding-top: 15px !important;
+    }
+    .lecture-title {
+        text-align: center;
+    }
+}

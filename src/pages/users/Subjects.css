@@ -1,0 +1,75 @@
+.subjects-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.year-title {
+    font-size: 30px;
+    color: #005492;
+    font-weight: 700;
+    font-family: 'MontserratBold';
+    line-height: 29px;
+}
+.subject-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.subject-list > div {
+    box-sizing: border-box;
+    /* flex: 1; */
+    flex-basis: 33%;
+    min-width: min-content;
+    padding: 10px;
+}
+.learn-btn {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background: linear-gradient(90deg, #0291E6 0%, #024A74 100%) !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 350px;
+    min-width: 200px;
+    display: block;
+    flex: 1;
+}
+.learn-btn:hover {
+    box-shadow: 0 2px 3px 0px #02517f;
+}
+.learn-btn:focus {
+    box-shadow: 0 1px 3px 0px #02517f !important;
+}
+.learn-btn > img {
+    height: 18px;
+    vertical-align: middle;
+}
+.learn-btn > span {
+    vertical-align: middle;
+}
+@media (max-width: 1320px) {
+    .subject-list > div {
+        flex-basis: 30%;
+    }
+}
+@media (max-width: 1200px) {
+    .subjects-container .subjects-image {
+        display: none;
+    }
+}
+@media (max-width: 800px) {
+    .subject-list > div {
+        flex-basis: 50%;
+    }
+}
+@media (max-width: 576px) {
+    .subject-container > .card > .card-body {
+        padding-top: 20px !important;
+    }
+    .subject-list > div {
+        flex-basis: 100%;
+    }
+    .year-title {
+        text-align: center;
+    }
+}

@@ -1,0 +1,93 @@
+.login-container {
+    margin-top: -109px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.login-container .page-content {
+    display: flex;
+}
+.login-container .page-content .page-left-content,
+.login-container .page-content .page-right-content {
+    flex: 1;
+    padding-top: 150px;
+    padding-bottom: 40px; 
+    min-height: calc(100vh - 252px);
+}
+.login-container .page-content .page-left-content {
+    background-color: #F4F7FA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-container .page-content .page-left-content img {
+    width: 100%;
+    padding-right: 40px;
+    padding-left: 30px;
+    height: auto;
+}
+.login-container .page-content .page-right-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+}
+.login-container .login-form {
+    max-width: 500px;
+    width: 100%;
+    padding: 15px;
+}
+.login-container .page-content .page-right-content .page-title {
+    font-family: MontserratBold;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 29px;
+    color: #005492;
+}
+.login-container .form-control {
+    padding: .75rem 1.0rem;
+    background-color: #F5F6F8;
+}
+.login-container .btn {
+    transition: all .2s ease;
+    padding: .75rem;
+    background: linear-gradient(90deg, #0191e6 0%, #014973 100%);
+}
+.login-container .btn:hover {
+    box-shadow: 0px 3px 4px #015180;
+}
+.login-container .btn:active {
+    background: linear-gradient(90deg, #032e47 0%, #0a4f77 100%) !important;
+}
+.google-signin-btn {
+    color: #005492!important;
+    background: white !important;
+    font-size: 1rem !important;
+    border-radius: 5px !important;
+    padding: 10px !important;
+    border-color: #005492;
+}
+.login-container .google-signin-btn:active {
+    background: linear-gradient(85deg, #e9e9e9 31%, #282424 107%) !important
+}
+@media (max-width: 992px) {
+    .login-container .page-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .login-container .page-content .page-left-content {
+        display: none;
+    }
+    .login-container .page-content .page-right-content {
+        min-height: auto;
+        width: 100%;
+    }
+    .login-container .page-content .page-right-content {
+        padding-top: 120px;
+    }
+}
+@media (max-width: 576px) {
+    .login-container .page-content .page-right-content {
+        padding-top: 120px;
+        padding-bottom: 15px;
+    }
+} 

@@ -1,0 +1,77 @@
+.faq-container {
+    margin-top: -109px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.page-content {
+    display: flex;
+    align-items: center;    
+}
+.faq-container .page-content .page-left-content, 
+.faq-container .page-content .page-right-content {
+    padding-bottom: 50px;
+    min-height: calc(100vh - 252px);
+}
+.faq-container .page-content .page-left-content {
+    padding-top: 140px;
+    background-color: #F4F7FA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    flex: 5;
+}
+.faq-container .page-content .page-left-content img {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    margin-bottom: 0px;;
+}
+.faq-container .page-content .page-right-content {
+    padding-top: 159px;
+    padding-left: 50px;
+    padding-right: 50px;
+    flex: 6;
+    background: #ffffff;
+}
+.faq-container .page-content .page-right-content .page-title {
+    font-family: MontserratBold;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 29px;
+    color: #005492;
+    margin-bottom: 15px;
+}
+.faq-container .accordion {
+    --bs-accordion-border-radius: 0px !important; 
+    --bs-accordion-inner-border-radius: 0px !important;
+}
+.faq-container .accordion-button:not(.collapsed) {
+    color: #005492;
+    font-family: MontserratBold;
+    font-weight: 700;
+}
+.faq-container .accordion-button::after {
+    background-image: url("../../assets/images/accordion-active-icon.png") !important;
+}
+.faq-container .accordion-button:not(.collapsed)::after {
+    background-image: url("../../assets/images/accordion-deactive-icon.png") !important;
+}
+@media (max-width: 1024px) {
+    .faq-container .page-content {
+        flex-direction: column;
+    }
+    .faq-container .page-content .page-left-content {
+        display: none;
+    }
+    .faq-container .page-content .page-right-content {
+        min-height: calc(100vh - 254px);
+        padding-top: 140px;
+    }
+}
+@media (max-width: 576px) {
+    .faq-container .page-content .page-right-content {
+        padding: 140px 20px 20px;
+    }
+}

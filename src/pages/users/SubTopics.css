@@ -1,0 +1,62 @@
+.sub-topics-container {
+    padding: 20px;
+}
+.topic-title {
+    font-size: 30px;
+    color: #005492;
+    font-weight: 700;
+    font-family: 'MontserratBold';
+    line-height: 29px;
+}
+.sub-topic-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.sub-topic-list > div {
+    box-sizing: border-box;
+    flex: 1;
+    flex-basis: 25%;
+    min-width: min-content;
+    padding: 10px;
+}
+.learn-btn {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background: linear-gradient(90deg, #0291E6 0%, #024A74 100%) !important;
+}
+.learn-btn:hover {
+    box-shadow: 0 2px 3px 0px #02517f;
+}
+.learn-btn:focus {
+    box-shadow: 0 1px 3px 0px #02517f !important;
+}
+.learn-btn > img {
+    height: 18px;
+    vertical-align: middle;
+}
+.learn-btn > span {
+    vertical-align: middle;
+}
+@media (max-width: 1320px) {
+    .sub-topic-list > div {
+        flex-basis: 30%;
+    }
+}
+@media (max-width: 800px) {
+    .sub-topic-list > div {
+        flex-basis: 50%;
+    }
+}
+@media (max-width: 576px) {
+    .sub-topic-container > .card > .card-body {
+        padding-top: 15px !important;
+    }
+    .sub-topic-list > div {
+        flex-basis: 100%;
+    }
+    .topic-title {
+        text-align: center;
+    }
+}

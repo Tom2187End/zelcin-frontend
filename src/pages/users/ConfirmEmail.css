@@ -1,0 +1,7 @@
+.confirm-email-container {
+    min-height: calc(100vh - 362px);
+}
+.confirm-email-container .card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

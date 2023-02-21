@@ -1,0 +1,19 @@
+.page-container {
+    padding-top: 109px;
+    min-height: calc(100vh - 253px);
+    height: calc(100vh - 253px);
+    overflow: auto;
+}
+.logged-page-container {
+    /* padding-left: 320px; */
+    padding-top: 110px;
+}
+.app-sidebar + div {
+    flex: 1;
+    padding-left: 320px;
+}
+@media (max-width: 1199px) {
+    .logged-page-container {
+        padding-left: 0px;
+    }
+}

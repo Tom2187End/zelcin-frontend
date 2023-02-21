@@ -1,0 +1,126 @@
+.contact-us-container {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.contact-us-container .card {
+    background-color: #FFFFFF !important;
+}
+.contact-us-container .page-title {
+    display: inline-block;
+    font-family: MontserratBold;
+    font-size: 25px;
+    line-height: 1.5;
+    font-weight: 700;
+    padding: 10px 25px;
+    color: #000000;
+    border-bottom: 1px solid #dddddd;
+}
+.contact-us-container .card .card-body {
+    padding: 10px 20px;
+}
+.contact-us-container .sub-title {
+    font-size: 16px;
+    font-family: MontserratBold;
+    font-weight: 700;
+    line-height: 20px;
+    color: #000000;
+}
+.contact-us-container .card .nav-link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+    color: #8c959f;
+
+}
+.contact-us-container .contact-list {
+    margin-bottom: 10px;
+}
+.contact-us-container .contact-list .nav-link > img {
+    margin-right: 15px;
+}
+.contact-us-container .form-control {
+    padding: .75rem 1.0rem;
+    background-color: #F5F6F8;
+}
+.contact-us-container .terms-and-conditions {
+    font-weight: 400;
+    color: #8B9194;
+}
+.contact-us-container .btn {
+    transition: all .2s ease;
+    padding: .75rem;
+    background: linear-gradient(90deg, #0191e6 0%, #014973 100%);
+}
+.contact-us-container .btn:hover {
+    box-shadow: 0px 3px 4px #015180;
+}
+.contact-us-container .btn:active {
+    background: linear-gradient(90deg, #032e47 0%, #0a4f77 100%) !important;
+}
+
+.contact-us-container .col-lg-5, .contact-us-container .col-lg-7 {
+    display: flex;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+.contact-us-container .col-lg-5 {
+    flex: 3;
+}
+.contact-us-container .col-lg-7 {
+    flex: 6;
+}
+.contact-us-container .row .card {
+    width: 100%;
+}
+.contact-us-container .col-lg-5 a.nav-link {
+    font-weight: bold;
+    color: #000000;
+}
+.contact-us-container .col-lg-7 .card .card-body {
+    padding: 20px 20px;
+}
+.contact-us-form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.contact-us-form > div {
+    width: 100%;
+    flex: 1;
+}
+@media (max-width: 1250px) {
+    .contact-us-container .page-title {
+        padding: 30px 30px 10px 30px;
+        font-size: 40px;
+    }
+    .contact-us-container .card-body {
+        padding: 30px 30px 0px 30px !important;
+    }
+    .contact-us-container .contact-list {
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 992px) {
+    .contact-us-container .col-lg-5, 
+    .contact-us-container .col-lg-7 {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    .contact-us-container .card {
+        margin-bottom: 16px;
+    }
+    .contact-us-form > div {
+        width: auto;
+    }
+}
+@media (max-width: 576px) {
+    .contact-us-container {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .contact-us-container .page-title { 
+        padding-top: 15px;
+        font-size: 28px;
+    }
+}

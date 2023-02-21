@@ -1,0 +1,20 @@
+.datatable thead {
+    background: #3c4b64;
+    color: #fafafa;
+    border-color: rgb(44 56 74 / 95%);
+}
+.datatable td {
+    vertical-align: middle;
+}
+.datatable .sort-btn {
+    text-decoration: none; 
+    color: #fafafa;
+    padding-top:0; 
+    padding-bottom: 0; 
+    padding-left: 5px; 
+    padding-right: 5px; 
+    float: right
+}
+.datatable .sort-btn:focus {
+    box-shadow: none;
+}

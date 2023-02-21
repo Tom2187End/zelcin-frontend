@@ -1,0 +1,46 @@
+.about-us-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.about-us-container .page-title {
+    font-family: MontserratBold;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 2;
+    color: #005492;
+}
+.about-us-container .page-description {
+    font-size: 18px;
+}
+.about-us-container .about-items.row > div .card-body {
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    min-height: 165px;
+}
+.about-us-container .about-items.row > div:nth-child(1) .card-body {
+    background-image: url("../../assets/images/Group-14669.svg");
+}
+.about-us-container .about-items.row > div:nth-child(2) .card-body {
+    background-image: url("../../assets/images/Group-14670.svg");
+}
+.about-us-container .about-items.row > div:nth-child(3) .card-body {
+    background-image: url("../../assets/images/Group-14673.svg");
+}
+.about-us-container .about-items.row > div:nth-child(4) .card-body {
+    background-image: url("../../assets/images/Group-14675.svg");
+}
+.about-us-container .about-item-title {
+    font-family: MontserratNormal;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000 !important;
+}
+.about-us-container .to-signup {
+    color: #005492 !important;
+    text-decoration: none;
+}
+@media (max-width: 576px) {
+    .about-us-container .about-items.row .card-body {
+    }
+}

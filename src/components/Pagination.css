@@ -1,0 +1,4 @@
+.page-item.active > .page-link {
+    background-color: #3c4b64 !important;
+    border-color: #2d394b !important;
+}

@@ -1,0 +1,37 @@
+.privacy-policy-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.privacy-policy-container .page-content {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 252px);
+}
+.privacy-policy-container .page-title {
+    font-family: MontserratBold;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 29px;
+    color: #005492;
+    margin-bottom: 16px;
+}
+.privacy-policy-container .description {
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 400;
+    color: #505050;
+    text-align: justify;
+}
+.privacy-policy-container .description .sub-title {
+    margin-top: 25px;
+    font-family: MontserratBold;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 700;
+    color: #000000;
+}
+@media (max-width: 576px) {
+    .privacy-policy-container {
+        padding: 40px 20px 20px;
+    }
+}

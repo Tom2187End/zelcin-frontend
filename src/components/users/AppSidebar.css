@@ -1,0 +1,41 @@
+.app-sidebar {
+    width: 320px;
+    display: block;
+    position: fixed;
+    top: 110px;
+    bottom: 252px;
+    z-index: 101;
+    background: #ffffff;
+}
+.app-sidebar .sidebar-brand {
+    padding: 30px 20px 10px 10px;
+}
+.app-sidebar .sidebar-brand img {
+    max-width: 210px;
+    width: 100%;
+    height: auto;
+}
+.app-sidebar .nav-link {
+    font-size: 19px !important;
+    font-weight: 500;
+    color: #8E8C8E;
+    line-height: 20px;
+    padding: 25px 40px
+}
+.app-sidebar .nav-link .sidebar-icon {
+    display: inline-block;
+    width: 30px;
+    margin-right: 20px;
+}
+.app-sidebar .nav-link > span {
+    vertical-align: middle;
+}
+.app-sidebar .nav-link.active {
+    background-color: #F4F7FA;
+    color: #005492;
+}
+@media (max-width: 1199px) {
+    .app-sidebar {
+        display: none;
+    }
+}

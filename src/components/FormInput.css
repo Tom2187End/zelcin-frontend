@@ -1,0 +1,15 @@
+.position-relative {
+    position: relative;
+}
+.position-relative i {
+    position: absolute;
+    width: 40px;
+    max-height: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.position-relative input {
+    padding-left: 40px !important;
+}

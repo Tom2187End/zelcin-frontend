@@ -1,0 +1,22 @@
+@font-face {
+  font-family: MontserratBold;
+  src: url(assets/fonts/static/Montserrat-Bold.ttf);
+}
+@font-face {
+  font-family: MontserratNormal;
+  src: url(assets/fonts/Montserrat-VariableFont_wght.ttf);
+}
+* {
+  font-family: MontserratNormal;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: MontserratBold;
+  font-weight: 700;
+  color: #005492 !important;
+}
+body, .page-container {
+  background: #f4f7fa !important;
+}
+tr {
+  cursor: pointer;
+}

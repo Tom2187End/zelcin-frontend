@@ -1,0 +1,64 @@
+.invoice-container {
+    display: flex;
+    min-height: calc(100vh - 335px);
+    align-items: center;
+}
+.invoice-container .btn-default {
+    border: 1px solid #dddddd;
+}
+.invoice-container .btn-default > * {
+    vertical-align: middle;
+}
+.invoice-container .description-items {
+    display: flex;
+}
+.invoice-container .description-item {
+    margin-right: 25px;
+}
+
+.invoice-container .description-item .description-item-name {
+    color: #505050;
+    font-size: 14px;
+    line-height: 25px;
+}
+.invoice-container .description-item .description-item-value {
+    color: #000000;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 500;
+}
+.invoice-container .item-description-container .item-description-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+.invoice-container .invoice-billing-info {
+    border-radius: 5px;
+    background-color: #D6E4F1;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 2;
+}
+.invoice-billing-info .invoice-billing-left-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.invoice-billing-left-info > div {
+    display: flex;
+    justify-content: space-between;
+}
+.invoice-billing-info .invoice-billing-right-info {
+    flex: 3;
+    text-align: right;
+}
+@media (max-width: 992px) {
+    .invoice-container .invoice-content {
+        flex-direction: column;
+    }
+    .invoice-container .invoice-billing-right-info {
+        flex: 1;
+    }
+}
