@@ -24,9 +24,10 @@ const EditSubTopic = () => {
             .required('Topic is required.'),
         name: yup.string('Enter a sub topic name.')
             .test('len', 'Must be less than or equal to 64 characters.', function(val) {
+                if (!val) val = "";
                 return val.length <= 64;
             })
-            .required('Sub topic name is required.')
+            .required('Please enter a name.')
     });
 
     useEffect(() => {

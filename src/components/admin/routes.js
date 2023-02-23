@@ -16,7 +16,7 @@ const EditSubTopic = React.lazy(() => import("../../pages/admin/EditSubTopic"));
 const MembershipPricing = React.lazy(() => import("../../pages/admin/MembershipPricing"));
 const Sales = React.lazy(() => import("../../pages/admin/Sales"));
 const Messages = React.lazy(() => import("../../pages/admin/Messages"));
-const Profile = React.lazy(() => import("../../pages/admin/Profile"));
+// const Profile = React.lazy(() => import("../../pages/admin/Profile"));
 const Login = React.lazy(() => import("../../pages/admin/Login"));
 
 const routes = [{
@@ -56,7 +56,7 @@ const routes = [{
 }, {
     path: "/messages", exact: true, name: "Messages", element: Messages, private: true, role: 1
 }, {
-    path: "/profile", exact: true, name: "Profile", element: Profile, private: true, role: 1
+    // path: "/profile", exact: true, name: "Profile", element: Profile, private: true, role: 1
 }, {
     path: "/login", exact: true, name: "Login", element: Login, private: false,
 }];

@@ -84,7 +84,7 @@ const SignUp = () => {
                         <div className="signup-form">
                             <h1 className="page-title">Create account</h1>
                             <Formik 
-                                validationSchema={validationSchema}
+                                // validationSchema={validationSchema}
                                 validateOnChange={false}
                                 validateOnBlur={false}
                                 onSubmit={onRegister}

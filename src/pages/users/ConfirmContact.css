@@ -1,0 +1,7 @@
+.confirm-contact-container {
+  min-height: calc(100vh - 362px);
+}
+.confirm-contact-container .card {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

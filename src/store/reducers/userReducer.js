@@ -20,7 +20,10 @@ export const userSlice = createSlice({
             state.token = action.payload.token;
         },
         updateUser(state, action) {
-            
+            window.localStorage.setItem("user", JSON.stringify(action.payload.user));
+            window.localStorage.setItem("token", action.payload.token);
+            state.user = action.payload.user;
+            state.token = action.payload.token;
         },
         updateMembership(state, action) {
             let user = JSON.parse(window.localStorage.getItem("user"));

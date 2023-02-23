@@ -48,6 +48,7 @@ const PremiumMembership = () => {
     let subjects = [...selectedSubjects]
     let find = subjects.indexOf(subject)
     if (find > -1) {
+      console.log(subjects);
       subjects.splice(find, 1)
     } else {
       subject.year_name = year.name;
@@ -224,7 +225,7 @@ const PremiumMembership = () => {
                 <h5 className='mb-1 ps-1'>
                   Total: ${getTotalPrice()}{' '}
                   {selectedSubjects.length
-                    ? `for ${selectedSubjects.length} subjects`
+                    ? `for ${selectedSubjects.length} ${selectedSubjects.length == 1 ? 'subject' : 'subjects'}`
                     : ''}
                 </h5>
                 {selectedSubjects.length !== 0 && (

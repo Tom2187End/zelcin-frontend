@@ -16,9 +16,10 @@ const CreateSubject = () => {
     const validationSchema = yup.object({
         name: yup.string('Enter a subject name.')
             .test('len', 'Must be less than or equal to 64 characters.', function(val) {
+                if (!val) val = "";
                 return val.length <= 64;
             })
-            .required('Subject name is required.')
+            .required('Please enter a name.')
     })
     useEffect(() => {
         const getYears = async () => {

@@ -211,31 +211,32 @@ const PremiumSignUp = () => {
                       type='radio'
                       name='paymentType'
                       value='stripe'
+                      className="mr-5 mb-3"
                       label={
                         <>
                           <LazyLoadImage
                             src={require('../../assets/images/visa.png')}
                             alt='visa'
                             height='25'
-                            className='me-1'
+                            className='mx-2'
                           />
                           <LazyLoadImage
                             src={require('../../assets/images/mastercard.png')}
                             alt='mastercard'
                             height='25'
-                            className='me-1'
+                            className='mx-2'
                           />
                           <LazyLoadImage
                             src={require('../../assets/images/applepay.png')}
                             alt='applepay'
                             height='23'
-                            className='me-1'
+                            className='mx-2'
                           />
                           <LazyLoadImage
                             src={require('../../assets/images/googlepay.png')}
                             alt='googlepay'
                             height='25'
-                            className='me-1'
+                            className='mx-2'
                           />
                         </>
                       }

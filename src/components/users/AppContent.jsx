@@ -28,8 +28,10 @@ const PrivacyPolicy = React.lazy(() =>
 const TermsAndConditions = React.lazy(() =>
   import('../../pages/users/TermsAndConditions')
 )
-const ConfirmEmail = React.lazy(() => import('../../pages/users/ConfirmEmail'))
+const ConfirmEmail = React.lazy(() => import('../../pages/users/ConfirmEmail'));
+const ConfirmContact = React.lazy(() => import('../../pages/users/ConfirmContact'));
 const VerifyEmail = React.lazy(() => import('../../pages/users/VerifyEmail'))
+const VerifyChangedEmail = React.lazy(() => import('../../pages/users/VerifyChangedEmail'));
 const Profile = React.lazy(() => import('../../pages/users/Profile'))
 const Invoices = React.lazy(() => import('../../pages/users/Invoices'))
 const Invoice = React.lazy(() => import('../../pages/users/Invoice'))
@@ -135,6 +137,13 @@ const AppContent = () => {
       private: false
     },
     {
+      path: '/confirm-contact',
+      exact: true,
+      name: 'Confirm Contact',
+      element: ConfirmContact,
+      private: false
+    },
+    {
       path: '/login',
       exact: true,
       name: 'Login',
@@ -188,6 +197,13 @@ const AppContent = () => {
       exact: false,
       name: 'Verify email',
       element: VerifyEmail,
+      private: false
+    },
+    {
+      path: 'verify-changed-email/:token',
+      exact: false,
+      name: 'Verify changed email',
+      element: VerifyChangedEmail,
       private: false
     },
     {

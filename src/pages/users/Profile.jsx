@@ -41,7 +41,6 @@ const Profile = () => {
   const validationPasswordsSchema = yup.object({
     password: yup
       .string()
-      .required('Password is required.')
       .min(8, 'Password should be minimum 8 characters in length.')
       .required('Password is required.'),
     confirmPassword: yup
@@ -61,7 +60,6 @@ const Profile = () => {
 
   useEffect(() => {
     setUser(userState)
-    console.log(userState)
   }, [userState])
 
   const updateProfile = async (user, { resetForm }) => {
@@ -81,7 +79,7 @@ const Profile = () => {
   }
 
   const updatePassword = async (passwords, { resetForm }) => {
-    let { data } = await Http.put(`users/${user._id}`, {
+    let { data } = await Http.patch(`users/${user._id}`, {
       password: passwords.password
     });
     if (data.status) {
@@ -228,7 +226,7 @@ const Profile = () => {
                         isInvalid={!!errors.confirmPassword}
                         touched={touched}
                       />
-                      <Form.Control.Feedback >{errors.confirmPassword}</Form.Control.Feedback>
+                      <Form.Control.Feedback type="invalid">{errors.confirmPassword}</Form.Control.Feedback>
                     </Form.Group>
                     <Button
                       type='submit'

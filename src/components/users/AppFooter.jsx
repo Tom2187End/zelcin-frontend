@@ -18,7 +18,7 @@ const AppFooter = () => {
         name: "Contact us"
     }, {
         path: "/privacy-policy",
-        name: "Privacy policy"
+        name: "Privacy Policy"
     }, {
         path: "/terms-conditions",
         name: "Terms & Conditions"

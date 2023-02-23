@@ -45,11 +45,12 @@ const Years = () => {
     }];
     
     const validationSchema = yup.object({
-        name: yup.string('Enter a year name.')
+        name: yup.string()
+            .required('Please enter a name.')
             .test('len', 'Must be less than 64 characters.', function(val) {
+                if (!val) val = "";
                 return val.length < 64;
             })
-            .required('Year name is required.')
     });
 
     useEffect(() => {
@@ -78,6 +79,7 @@ const Years = () => {
     }
     
     const onSave = async (year) => {
+        console.log(year)
         let { data } = await Http.post("admin/years", year);
         if (data.success) {
             toast.success(data.msg);

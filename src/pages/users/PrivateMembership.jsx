@@ -62,10 +62,12 @@ const PrivateMembership = () => {
     let subjects = [...selectedSubjects]
     let find = subjects.indexOf(subject)
     if (find > -1) {
+      console.log("FIRST===>", subjects)
       subjects.splice(find, 1)
     } else {
       subject.year_name = year.name;
       subjects.push(subject)
+      console.log("SECOND====>", subjects)
     }
     setSelectedSubjects(subjects)
   }
@@ -291,7 +293,7 @@ const PrivateMembership = () => {
                     <h5 className='mb-1 ps-1'>
                       Total: ${getTotalPrice()}{' '}
                       {selectedSubjects.length
-                        ? `for ${selectedSubjects.length} subjects`
+                        ? `for ${selectedSubjects.length} ${selectedSubjects.length == 1 ? 'subject' : 'subjects'}`
                         : ''}
                     </h5>
                     <h6 className='mb-0'>Only $15 for one more subject.</h6>
@@ -342,6 +344,7 @@ const PrivateMembership = () => {
                     type='radio'
                     name='paymentType'
                     value='stripe'
+                    className='mr-3 mb-3'
                     label={
                       <>
                         <img
@@ -354,19 +357,19 @@ const PrivateMembership = () => {
                           src={require('../../assets/images/mastercard.png')}
                           alt='mastercard'
                           height='20'
-                          className='me-1'
+                          className='mx-1'
                         />
                         <img
                           src={require('../../assets/images/applepay.png')}
                           alt='applepay'
                           height='18'
-                          className='me-1'
+                          className='mx-1'
                         />
                         <img
                           src={require('../../assets/images/googlepay.png')}
                           alt='googlepay'
                           height='20'
-                          className='me-1'
+                          className='mx-1'
                         />
                       </>
                     }

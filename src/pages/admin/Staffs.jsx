@@ -14,7 +14,7 @@ const Staffs = () => {
     const [sort, setSort] = useState();
     const [pagination, setPagination] = useState({page: 1, totalCount: 0, pageSize: 10});
     const [staffId, setStaffId] = useState(0);
-    // const [status, setStatus] = useState(1);
+    const [staffStatus, setStaffStatus] = useState(1);
     const [staff, setStaff] = useState({
         firstName: "",
         lastName: "",
@@ -23,7 +23,7 @@ const Staffs = () => {
         isSendInstructions: true
     });
     const [visibleNewModal, setVisibleNewModal] = useState(false);
-    const [visibleConfirmStatus, setVisibleConfirmStatus] = useState(0);
+    // const [visibleConfirmStatus, setVisibleConfirmStatus] = useState(0);
     const [visibleDeleteUser, setVisibleDeleteUser] = useState(0);
     
     const columns = [{
@@ -43,7 +43,7 @@ const Staffs = () => {
     }, {
         key: "action",
         name: "Action",
-        width: 90,
+        width: 120,
         render: (rowData) => {
             return (
                 <div>
@@ -55,9 +55,19 @@ const Staffs = () => {
                     >
                         <i className="fa fa-edit"></i>
                     </Button>
+                    <Button variant="outline-primary"
+                        data-tip={ rowData.status ? 'Disable' : 'Allow' }
+                        key="2" size="sm"
+                        className="me-1"
+                        onClick={() => {loginMng(rowData._id)}}
+                    >
+                        {
+                            rowData.status ? <i className="fa fa-thumbs-up"></i> : <i className="fa fa-thumbs-down"></i>
+                        }
+                    </Button>
                     <Button variant="outline-danger"
                         data-tip="Delete"
-                        key="2" size="sm"
+                        key="3" size="sm"
                         onClick={() => removeUser(rowData._id)}><i className="fa fa-trash"></i></Button>
                     <ReactTooltip/>
                 </div>
@@ -123,6 +133,24 @@ const Staffs = () => {
             } else {
                 toast.error(data.msg, "Warning!");
             }
+        }
+    }
+
+    const loginMng = async (id) => {
+        let result = await Http.put(`admin/staffs/login-mng/${id}`);
+        if (result.data.status) {
+            toast.success(result.data.msg);
+            const newData = data.map((c, i) => {
+                if (c._id == id) {
+                    c.status = c.status ? false : true;
+                    return c;
+                } else {
+                    return c;
+                }
+            });
+            setData(newData);
+        } else {
+            toast.error(result.data.msg, "Warning!");
         }
     }
 
@@ -192,6 +220,16 @@ const Staffs = () => {
                     <Button variant="danger" onClick={() => setVisibleNewModal(0)}><i className="fa fa-times"></i> Cancel</Button>
                 </Modal.Footer>
             </Modal>
+            {/* <Modal show={visibleConfirmStatus} onHide={() => setVisibleConfirmStatus(0)}>
+                <Modal.Header closeButton>
+                <Modal.Title>Are you sure?</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>You are going to { staffStatus ? 'ban' : 'allow' } the staff.</Modal.Body>
+                <Modal.Footer>
+                    <Button variant="primary" onClick={() => loginMng()}>Yes</Button>
+                    <Button variant="danger" onClick={() => setVisibleConfirmStatus(0)}>No</Button>
+                </Modal.Footer>
+            </Modal> */}
             <Modal show={visibleDeleteUser} onHide={() => setVisibleDeleteUser(0)}>
                 <Modal.Header closeButton>
                 <Modal.Title>Are you sure?</Modal.Title>

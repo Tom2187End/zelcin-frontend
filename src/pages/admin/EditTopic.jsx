@@ -17,9 +17,10 @@ const EditSubject = () => {
             .required('Subject is required.'),
         name: yup.string('Enter a topic name.')
             .test('len', 'Must be less than 64 characters.', function(val) {
+                if (!val) val = "";
                 return val.length < 64;
             })
-            .required('Topic name is required.')
+            .required('Please enter a name.')
     })
     useEffect(() => {
         const getTerms = async () => {

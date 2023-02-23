@@ -19,7 +19,7 @@ const DataTable = ({
     sort,
     search,
     onChange,
-    emptyText = "Empty Data",
+    emptyText = "Empty data",
     onRow = () => {}
 }) => {
     const onSearch = (e) => {
