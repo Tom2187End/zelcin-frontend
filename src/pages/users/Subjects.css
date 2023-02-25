@@ -9,15 +9,17 @@
     font-family: 'MontserratBold';
     line-height: 29px;
 }
+.flex-1 {
+    flex: 1;
+}
 .subject-list {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 .subject-list > div {
     box-sizing: border-box;
-    /* flex: 1; */
     flex-basis: 33%;
     min-width: min-content;
     padding: 10px;
@@ -29,7 +31,6 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 350px;
     min-width: 200px;
     display: block;
     flex: 1;

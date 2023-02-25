@@ -26,8 +26,9 @@ const CategoryList = () => {
                         {year.subjects.map((subject, idx) => (
                           <Nav.Item key={idx}>
                             <LinkContainer to={`/${year.slug}/${subject.slug}`}>
-                              <Nav.Link>
-                                <i className="fa fa-circle"></i> {subject.name}
+                              <Nav.Link className="d-flex">
+                                <i className="fa fa-circle"></i> 
+                                <span>{subject.name}</span>
                               </Nav.Link>
                             </LinkContainer>
                           </Nav.Item>

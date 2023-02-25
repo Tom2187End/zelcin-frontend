@@ -11,12 +11,14 @@ import {
 import { useDispatch } from 'react-redux'
 import { setLoading } from '../../store/reducers/userReducer'
 import Http from '../../services/Http'
+import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify'
 import './PrivateMembership.css'
 import moment from 'moment'
 
 const PrivateMembership = () => {
   const dispatch = useDispatch()
+  const navigate = useNavigate()
   const [isOpen, setIsOpen] = useState(false)
   const [years, setYears] = useState([])
   const [selectedSubjects, setSelectedSubjects] = useState([])
@@ -27,6 +29,7 @@ const PrivateMembership = () => {
   const [paymentType, setPaymentType] = useState('stripe')
   useEffect(() => {
     document.title = 'Join AnswerSheet - affordable HSC support'
+    console.log(navigate);
     const getMemberships = async () => {
       let { data } = await Http.get('memberships')
       setMemberships(data.memberships)

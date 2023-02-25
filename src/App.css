@@ -20,3 +20,6 @@ body, .page-container {
 tr {
   cursor: pointer;
 }
+.flex-1 {
+  flex: 1
+}

@@ -272,11 +272,7 @@ const AppContent = () => {
   ]
 
   return (
-    <div
-      className={
-        'page-container ' + (user.token ? 'logged-page-container' : '')
-      }
-    >
+    <div className="page-container">
       {user.token && <AppSidebar />}
       <Suspense>
         <Routes>

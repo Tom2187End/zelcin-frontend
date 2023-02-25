@@ -29,7 +29,7 @@ const Subjects = () => {
                         <Card className="mb-4" key={idx}>
                             <Card.Body className="pt-4 pt-sm-4 pt-md-5 pt-3 px-sm-4 px-md-5  pb-3 pb-sm-4">
                                 <div className="d-flex justify-content-between">
-                                    <div className="pe-lg-3 pe-0">
+                                    <div className="pe-lg-3 pe-0 flex-1">
                                         <h1 className="year-title">{year.name}</h1>
                                         {year.description && <p>{year.description}</p>}
                                         <div className="subject-list">
