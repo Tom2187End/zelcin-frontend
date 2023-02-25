@@ -1,9 +1,9 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
 import { Nav } from "react-bootstrap";
-import { useDispatch } from "react-redux";
-import { deleteUser } from "../../store/reducers/userReducer";
-import Logo from "../../assets/images/logo.svg";
+import { useSelector, useDispatch } from "react-redux";
+import { deleteUser, updateSidebar } from "../../store/reducers/userReducer";
+import collapseIcon from "../../assets/images/collapse_icon.svg"
 import DashboardIcon from "../../assets/images/invoice_icon.svg";
 import DashboardActiveIcon from "../../assets/images/invoice_active_icon.svg";
 import CourseIcon from "../../assets/images/subjects_icon.svg";
@@ -15,13 +15,22 @@ const AppSidebar = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const dispatch = useDispatch();
+    const expandSidebar = useSelector(store => store.user.expandSidebar);
+
     const logout = () => {
         dispatch(deleteUser());
         navigate("/login");
     }
     return (
-        <div className="app-sidebar">
+        <div className={`app-sidebar ${expandSidebar ? 'expanded' : ''}`}>
             <Nav className="flex-column" activeKey={location.pathname}>
+                <Nav.Item onClick={() => dispatch(updateSidebar(!expandSidebar))}>
+                    <Nav.Link>
+                        <span className="sidebar-icon sidebar-toggler-btn">
+                            <img src={collapseIcon} alt="collapse"/>
+                        </span>
+                    </Nav.Link>
+                </Nav.Item>
                 <Nav.Item>
                     <LinkContainer to="/invoices">
                         <Nav.Link>

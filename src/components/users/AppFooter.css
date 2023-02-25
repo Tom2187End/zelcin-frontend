@@ -7,6 +7,8 @@
     background-color: #2C3136;
     color: #fafafa;
     width: 100%;
+    position: relative;
+    z-index: 2;
 }
 .footer-logo {
     margin-bottom: 16px !important;
@@ -15,9 +17,6 @@
     color: #fafafa !important;
     padding-left: 30px;
     padding-right: 30px;
-}
-.logged-footer {
-    /* padding-left: 320px; */
 }
 @media (max-width: 1199px) {
     .logged-footer {

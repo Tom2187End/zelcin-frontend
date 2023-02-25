@@ -10,7 +10,8 @@ export const userSlice = createSlice({
             email: ""
         },
         token: window.localStorage.getItem("token") ? window.localStorage.getItem("token") : "",
-        loading: false
+        loading: false,
+        expandSidebar: false
     },
     reducers: {
         createUser(state, action) {
@@ -43,10 +44,13 @@ export const userSlice = createSlice({
         },
         setLoading(state, action) {
             state.loading = action.payload;
-        } 
+        },
+        updateSidebar(state, action) {
+            state.expandSidebar = action.payload;
+        }
     }
 });
 
-export const { createUser, updateUser, updateMembership, deleteUser, setLoading } = userSlice.actions;
+export const { createUser, updateUser, updateMembership, deleteUser, setLoading, updateSidebar } = userSlice.actions;
 
 export default userSlice.reducer;

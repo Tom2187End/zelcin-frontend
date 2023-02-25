@@ -68,20 +68,6 @@ const AppHeader = () => {
   ]
   const privateNavItems = [
     {
-      path: '/invoices',
-      name: 'Invoices',
-      isHref: true
-    },
-    {
-      path: '/subjects',
-      name: 'Subjects',
-      isHref: true
-    },
-    {
-      path: '/private-membership',
-      name: 'Membership'
-    },
-    {
       path: '/logout',
       name: 'Logout',
       isHref: false,
@@ -89,10 +75,10 @@ const AppHeader = () => {
     }
   ]
   return (
-    <div>
+    <div style={{ height: 109 }}>
       {user.token ? (
         <Navbar
-          expand='xl'
+          expand='sm'
           style={{ backgroundColor: '#D6E4F1' }}
           className='logged-header'
           collapseOnSelect
@@ -103,30 +89,7 @@ const AppHeader = () => {
                 <LazyLoadImage src={LogoSvg} alt='logo' />
               </Nav.Link>
             </LinkContainer>
-            <Navbar.Toggle aria-controls='navbar' />
-            <Navbar.Collapse id='navbar'>
               <Nav className='ms-auto' activeKey={location.pathname}>
-                {privateNavItems.map((navItem, idx) => {
-                  if (navItem.onClick) {
-                    return (
-                      <Nav.Item
-                        className='hide-item'
-                        key={idx}
-                        onClick={navItem.onClick}
-                      >
-                        <Nav.Link>{navItem.name}</Nav.Link>
-                      </Nav.Item>
-                    )
-                  } else {
-                    return (
-                      <Nav.Item className='hide-item' key={idx}>
-                        <LinkContainer to={navItem.path}>
-                          <Nav.Link>{navItem.name}</Nav.Link>
-                        </LinkContainer>
-                      </Nav.Item>
-                    )
-                  }
-                })}
                 <NavDropdown
                   className='avatar-dropdown'
                   align='end'
@@ -154,7 +117,6 @@ const AppHeader = () => {
                   </NavDropdown.Item>
                 </NavDropdown>
               </Nav>
-            </Navbar.Collapse>
           </Container>
         </Navbar>
       ) : (

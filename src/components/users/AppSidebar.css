@@ -1,26 +1,40 @@
 .app-sidebar {
-    width: 320px;
+    width: 70px;
     display: block;
     position: fixed;
-    top: 110px;
-    bottom: 252px;
+    top: 109px;
+    bottom: 0px;
     z-index: 101;
     background: #ffffff;
+    overflow: hidden;
+    transition: all .2s ease;
 }
-.app-sidebar .sidebar-brand {
-    padding: 30px 20px 10px 10px;
+.app-sidebar.expanded {
+    width: 300px;
 }
-.app-sidebar .sidebar-brand img {
-    max-width: 210px;
-    width: 100%;
-    height: auto;
+.app-sidebar .flex-column {
+    min-width: 300px;
+}
+.sidebar-toggler-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #0054929e;
+    margin-left: -6px;
+    transition: all .3s ease;
+}
+.sidebar-toggler-btn:hover {
+    background-color: #005492;
 }
 .app-sidebar .nav-link {
     font-size: 19px !important;
     font-weight: 500;
     color: #8E8C8E;
     line-height: 20px;
-    padding: 25px 40px
+    padding: 25px 25px;
 }
 .app-sidebar .nav-link .sidebar-icon {
     display: inline-block;
@@ -33,9 +47,4 @@
 .app-sidebar .nav-link.active {
     background-color: #F4F7FA;
     color: #005492;
-}
-@media (max-width: 1199px) {
-    .app-sidebar {
-        display: none;
-    }
 }
