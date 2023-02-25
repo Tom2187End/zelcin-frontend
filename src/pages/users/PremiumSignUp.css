@@ -56,6 +56,21 @@
 .signup-container .btn:active {
     background: linear-gradient(90deg, #032e47 0%, #0a4f77 100%) !important;
 }
+.google-signup-btn {
+    color: #005492!important;
+    background: white !important;
+    font-size: 1rem !important;
+    border-radius: 5px !important;
+    padding: 10px !important;
+    border-color: #005492;
+}
+.premium-signup-container .google-signup-btn:active {
+    background: linear-gradient(85deg, #e9e9e9 31%, #282424 107%) !important
+}
+.google-signup-btn > img {
+    vertical-align: sub;
+    margin-right: 10px;
+}
 @media (max-width: 992px) {
     .premium-signup-container .page-content {
         display: flex;

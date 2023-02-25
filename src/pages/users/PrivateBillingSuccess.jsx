@@ -29,6 +29,7 @@ const PrivateBillingSuccess = () => {
                     paymentId = searchParams.get("session_id");
                     payerId = 0;
                 }
+                console.log("GATEWAY=====>", gateway, "PAYMENTID======>", paymentId, "PAYERID======>", payerId, "HISTORYID======>", historyId)
                 let { data } = await Http.get(`private-billing/${gateway}/return?paymentId=${paymentId}&payerId=${payerId}&historyId=${historyId}`)
                 if (data.success) {
                     setInvoiceId(data.invoiceId);
@@ -44,6 +45,7 @@ const PrivateBillingSuccess = () => {
                     }
                 }
             }, 2500);
+            navigate('/private-membership');
         }
         setPrivateBillingTransaction();
     }, []);

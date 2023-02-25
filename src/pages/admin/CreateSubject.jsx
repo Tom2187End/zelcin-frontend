@@ -62,7 +62,7 @@ const CreateSubject = () => {
                 <Card.Title bsPrefix="card-title mb-0 text-light" as="h5">
                     New subject
                 </Card.Title>
-            </Card.Header>       
+            </Card.Header>
             <Card.Body>
                 <Formik
                     validationSchema={validationSchema}
@@ -83,7 +83,7 @@ const CreateSubject = () => {
                                     <Form.Control 
                                         className="d-none" 
                                         type="file"
-                                        accept=".png,.jpg,.bmp,.svg,.gif,.tiff,.pdf,.eps" 
+                                        accept=".png,.jpg,.bmp,.svg,.gif,.tiff,.pdf,.eps"
                                         ref={fileRef} onChange={chooseFile}/>
                                 </div>
                             </Col>
@@ -92,7 +92,7 @@ const CreateSubject = () => {
                                     <Form.Label>Year:</Form.Label>
                                     <Form.Select 
                                         name="year" 
-                                        onChange={handleChange} 
+                                        onChange={handleChange}
                                         onBlur={handleBlur}
                                         value={values.year}
                                         touched={touched}
