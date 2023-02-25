@@ -65,12 +65,10 @@ const PrivateMembership = () => {
     let subjects = [...selectedSubjects]
     let find = subjects.indexOf(subject)
     if (find > -1) {
-      console.log("FIRST===>", subjects)
       subjects.splice(find, 1)
     } else {
       subject.year_name = year.name;
       subjects.push(subject)
-      console.log("SECOND====>", subjects)
     }
     setSelectedSubjects(subjects)
   }

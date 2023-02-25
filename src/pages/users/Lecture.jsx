@@ -56,6 +56,37 @@ const Lecture = () => {
       }
     }
     getLecture()
+    const handleContextMenu = (ev) => {
+      ev.preventDefault();
+    }
+    const handleCopy = (ev) => {
+      ev.preventDefault();
+    }
+    const handleCut = (ev) => {
+      ev.preventDefault();
+    }
+    const handlePaste = (ev) => {
+      ev.preventDefault();
+    }
+    const handlePrint = (ev) => {
+      if((ev.ctrlKey || ev.metaKey) && (ev.key === "p" || ev.charCode === 16 || ev.charCode === 112 || ev.keyCode === 80) ){
+        ev.cancelBubble = true;
+        ev.preventDefault();
+        ev.stopImmediatePropagation();
+    }  
+    }
+    window.addEventListener('contextmenu', handleContextMenu);
+    window.addEventListener('copy', handleCopy);
+    window.addEventListener('cut', handleCut);
+    window.addEventListener('paste', handlePaste);
+    window.addEventListener('keydown', handlePrint);
+    return () => {
+      window.removeEventListener("contextmenu", handleContextMenu);
+      window.removeEventListener("copy", handleCopy);
+      window.removeEventListener("cut", handleCut);
+      window.removeEventListener("paste", handlePaste);
+      window.removeEventListener("keydown", handlePrint);
+    }
   }, [])
 
   const checkMembership = async subject => {
@@ -72,7 +103,7 @@ const Lecture = () => {
     window.com.wiris.js.JsPluginViewer.parseElement(
       mathRef.current,
       true,
-      function () {}
+      function () { }
     )
   }, [subTopic])
 
@@ -80,13 +111,14 @@ const Lecture = () => {
     <div className='lecture-container'>
       <Container>
         <Card className='mb-4'>
-          <Card.Body className='pt-5 px-5 pb-4'>
+          <Card.Body className='pt-5 px-5 pb-4' id="content">
             <h2 className='lecture-title'>{subTopic.name}</h2>
             <div
               ref={mathRef}
               className='mt-3 lecture-content'
               dangerouslySetInnerHTML={{ __html: subTopic.content }}
             ></div>
+            <input />
           </Card.Body>
         </Card>
       </Container>
