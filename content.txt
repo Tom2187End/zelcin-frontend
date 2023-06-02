@@ -5,6 +5,7 @@
 <td style="width: 33.4362%; height: 19.5938px; text-align: center;">Slope-Intercept</td>
 <td style="width: 33.4362%; text-align: center; height: 19.5938px;">Point-slope</td>
 <td style="width: 33.2305%; height: 19.5938px; text-align: center;">Standard</td>
+<td style="width: 33.2305%; height: 19.5938px; text-align: center;">Standard</td>
 </tr>
 <tr style="height: 25px;">
 <td style="width: 33.4362%; height: 25px; text-align: center;"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><mi>m</mi><mi>x</mi><mo>&#160;</mo><mo>+</mo><mo>&#8201;</mo><mi>b</mi></math></td>
